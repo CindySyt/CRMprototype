@@ -2352,6 +2352,7 @@ a.footer-links:hover,
 }
 
 #root-nav li a:hover,
+#root-nav li a.active,
 #crm-nav li a:hover,
 #back-forward:hover {
     color: #000;
@@ -3134,4 +3135,18 @@ html.k-materialblack .demo-section.k-content {
 
 .crm-nav .navbar{
     margin-bottom: 0;
+}
+
+.crm-nav  .navbar-header{
+    width:220px;
+}
+
+.crm-nav .container-fluid{
+    padding-left:0;
+    
+    color: #fff;
+}
+
+.crm-pagehead{
+    height:90px;
 }
