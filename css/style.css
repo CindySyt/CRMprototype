@@ -1,16 +1,5 @@
-@import url(http://fonts.googleapis.com/css?family=Roboto+Slab);
 
-/* New font */
-@font-face {
-    font-family: 'demos';
-    src:url('fonts/demos.eot?9wdv67');
-    src:url('fonts/demos.eot?#iefix9wdv67') format('embedded-opentype'),
-        url('fonts/demos.woff?9wdv67') format('woff'),
-        url('fonts/demos.ttf?9wdv67') format('truetype'),
-        url('fonts/demos.svg?9wdv67#demos') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
+
 
 /*Roboto Font used in Material Theme preview*/
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic,300,300italic);
@@ -87,10 +76,12 @@ body,h1,h2,h3,h4,p,ul,li,a,button,.main-nav,.kendo-nav,#banner p,.browsers,#nav-
 
 body {
     background-color: #fff;
-    color: #555;
+   
     font: 400 12px Arial, Helvetica, sans-serif;
     min-width: 1230px;
     position: relative;
+    color: #676a6c;
+    font-family: 'Microsoft Yahei UI', 'Microsoft Yahei', Verdana, Simsun, 'Segoe UI Light', 'Helvetica Neue', Arial, sans-serif;
 }
 
 body,
@@ -2272,8 +2263,9 @@ a.footer-links:hover,
 
 .root-nav-categories h3,
 #crm-nav h3 {
-    color: #000;
+    color: #16987e;
     font-size: 14px;
+    font-weight:600;
     line-height: 14px;
     padding: 0.5em 0 0.5em 3.571em;
     text-transform: uppercase;
@@ -2355,9 +2347,10 @@ a.footer-links:hover,
 #root-nav li a.active,
 #crm-nav li a:hover,
 #back-forward:hover {
-    color: #000;
+    color: #fff;
     text-decoration: none;
-    background-color: #e2e4e7;
+    background-color: #19aa8d;
+
 }
 
 .k-hover-enabled #root-nav li a:hover,
@@ -2442,19 +2435,20 @@ a.footer-links:hover,
 
 #nav-wrapper {
     width: 220px;
-    border-top: 1px solid #e2e4e7;
-    border-right: 1px solid #e2e4e7;
+    
     overflow-x: hidden;
     overflow-y: auto;
-    position: relative;
+    position: absolute;
     float: left;
     clear: left;
-    background-color: #f5f7f8;
+    background-color: #f3f3f3;
     height: 100%;
+    bottom: 0;
+    top: 56px;
 }
 
 #nav {
-    width: 600px;
+    
 
     white-space: nowrap;
     margin-left: -300px;
@@ -2467,7 +2461,7 @@ a.footer-links:hover,
 }
 
 #root-nav, #crm-nav {
-    width: 299px;
+    width: 220px;
     float: left;
 }
 
@@ -2532,6 +2526,7 @@ a.footer-links:hover,
     position: relative;
     overflow-x: hidden;
     overflow-y: auto;
+    left: 220px;
 }
 
 #crm-search-wrapper,
@@ -3124,14 +3119,6 @@ html.k-materialblack .demo-section.k-content {
   }
 
 
-#crm-nav-logo{
-    width: 220px;
-    float: left;
-    clear: left;
-    background-color: #f5f7f8;
-    border-right: 1px solid #e2e4e7;
-    border-top: 1px solid #e2e4e7;
-}
 
 .crm-nav .navbar{
     margin-bottom: 0;
@@ -3150,3 +3137,90 @@ html.k-materialblack .demo-section.k-content {
 .crm-pagehead{
     height:90px;
 }
+
+.crm-nav .navbar-nav>li>a {
+    color: #a7b1c2;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.crm-nav .navbar-nav>li>a:hover,
+
+.crm-nav .navbar-nav>li>a:focus {
+    background-color: #293846;
+    color: #fff;
+}
+
+
+
+.crm-nav .navbar-default{
+    background-color: #2f4050;
+    border-radius: 0px;
+}
+
+.crm-nav .navbar-default .navbar-nav>.active>a, 
+.crm-nav .navbar-default .navbar-nav>.active>a:focus,
+.crm-nav .navbar-default .navbar-nav>.active>a:hover{
+    background-color: #293846;
+    color: #fff;
+    border-bottom: 4px solid #19aa8d;
+}
+
+.nav > li > a i {
+  margin-right: 6px;
+}
+
+.count-info .label {
+  line-height: 12px;
+  padding: 2px 5px;
+  position: absolute;
+  right: 6px;
+  top: 12px;
+}
+
+.label-primary,
+.badge-primary {
+  background-color: #1ab394;
+  color: #FFFFFF;
+}
+.label-success,
+.badge-success {
+  background-color: #1c84c6;
+  color: #FFFFFF;
+}
+.label-warning,
+.badge-warning {
+  background-color: #f8ac59;
+  color: #FFFFFF;
+}
+.label-warning-light,
+.badge-warning-light {
+  background-color: #f8ac59;
+  color: #ffffff;
+}
+.label-danger,
+.badge-danger {
+  background-color: #ed5565;
+  color: #FFFFFF;
+}
+.label-info,
+.badge-info {
+  background-color: #23c6c8;
+  color: #FFFFFF;
+}
+.label-inverse,
+.badge-inverse {
+  background-color: #262626;
+  color: #FFFFFF;
+}
+.label-white,
+.badge-white {
+  background-color: #FFFFFF;
+  color: #5E5E5E;
+}
+.label-white,
+.badge-disable {
+  background-color: #2A2E36;
+  color: #8B91A0;
+}
+
