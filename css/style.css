@@ -74,13 +74,27 @@ body,h1,h2,h3,h4,p,ul,li,a,button,.main-nav,.kendo-nav,#banner p,.browsers,#nav-
     list-style:none;
 }
 
-body {
-    background-color: #fff;
-   
+body.crm {
+    background-color: #f3f3f3;
     font: 400 12px Arial, Helvetica, sans-serif;
     min-width: 1230px;
     position: relative;
     color: #676a6c;
+    font-family: 'Microsoft Yahei UI', 'Microsoft Yahei', Verdana, Simsun, 'Segoe UI Light', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.crm h1, 
+.crm h2, 
+.crm h3, 
+.crm h4, 
+.crm h5, 
+.crm h6, 
+.crm .h1, 
+.crm .h2, 
+.crm .h3, 
+.crm .h4, 
+.crm .h5,
+.crm .h6 {
     font-family: 'Microsoft Yahei UI', 'Microsoft Yahei', Verdana, Simsun, 'Segoe UI Light', 'Helvetica Neue', Arial, sans-serif;
 }
 
@@ -1168,8 +1182,8 @@ pre.prettyprint
 
 #inspector-container .kendo-inspector .editable-object .codefold.highlight > .codefold-button,
 #inspector-container .kendo-inspector .editable-object .codefold.highlight > .codefold-button:after {
-	background-color: #fff;
-	color: #036c9c;
+    background-color: #fff;
+    color: #036c9c;
     cursor: pointer;
 }
  
@@ -2263,11 +2277,11 @@ a.footer-links:hover,
 
 .root-nav-categories h3,
 #crm-nav h3 {
-    color: #16987e;
+    color: #0070c9;
     font-size: 14px;
     font-weight:600;
     line-height: 14px;
-    padding: 0.5em 0 0.5em 3.571em;
+    padding: 0.5em 0 0.5em 3em;
     text-transform: uppercase;
 }
 
@@ -2343,15 +2357,34 @@ a.footer-links:hover,
     transition: all .2s ease;
 }
 
-#root-nav li a:hover,
-#root-nav li a.active,
-#crm-nav li a:hover,
-#back-forward:hover {
-    color: #fff;
+ 
+
+
+#root-nav li.active a
+{
+    color: #0070c9;
     text-decoration: none;
-    background-color: #19aa8d;
+    background-color: #f3f3f3;
 
 }
+
+
+#root-nav li a:hover,
+#crm-nav li:hover,
+#back-forward:hover{
+    color: #0070c9;
+    text-decoration: none;
+
+}
+
+#root-nav li a:hover > i,
+#crm-nav li:hover > i,
+#back-forward:hover{
+    color: transparent;
+
+}
+
+
 
 .k-hover-enabled #root-nav li a:hover,
 .k-hover-enabled #crm-nav li a:hover {
@@ -2435,16 +2468,15 @@ a.footer-links:hover,
 
 #nav-wrapper {
     width: 220px;
-    
     overflow-x: hidden;
     overflow-y: auto;
     position: absolute;
     float: left;
     clear: left;
-    background-color: #f3f3f3;
+    background-color: #fff;
     height: 100%;
     bottom: 0;
-    top: 56px;
+    top: 50px;
 }
 
 #nav {
@@ -2526,7 +2558,7 @@ a.footer-links:hover,
     position: relative;
     overflow-x: hidden;
     overflow-y: auto;
-    left: 220px;
+    margin-left: 220px;
 }
 
 #crm-search-wrapper,
@@ -3138,32 +3170,48 @@ html.k-materialblack .demo-section.k-content {
     height:90px;
 }
 
-.crm-nav .navbar-nav>li>a {
-    color: #a7b1c2;
-    font-weight: 600;
+.crm-nav .navbar-default .navbar-nav>li>a {
+    color: #fff;
+    font-weight: 400;
     font-size: 14px;
 }
 
-.crm-nav .navbar-nav>li>a:hover,
-
-.crm-nav .navbar-nav>li>a:focus {
-    background-color: #293846;
+/*导航栏 模块导航样式*/
+.crm-nav .navbar-default .nav-model>li>a:hover,
+.crm-nav .navbar-default .nav-model>li>a:focus {
+    background-color: #4679bd;
     color: #fff;
+    font-size: 16px;  
+}
+
+/*导航栏 最右导航样式*/
+.crm-nav .navbar-default .navbar-right>li>a:hover,
+.crm-nav .navbar-default .navbar-right>li>a:focus {
+    background-color: #4679bd;
+    color: #fff;
+}
+
+.crm-nav .navbar-default .navbar-nav>li.active>a:hover,
+.crm-nav .navbar-default .navbar-nav>li.active>a:focus {
+    
+    font-size: 14px;
+   
 }
 
 
 
 .crm-nav .navbar-default{
-    background-color: #2f4050;
+    background-color: #4072b4;
     border-radius: 0px;
+    border: 0px;
 }
 
 .crm-nav .navbar-default .navbar-nav>.active>a, 
 .crm-nav .navbar-default .navbar-nav>.active>a:focus,
 .crm-nav .navbar-default .navbar-nav>.active>a:hover{
-    background-color: #293846;
-    color: #fff;
-    border-bottom: 4px solid #19aa8d;
+    background-color: #f3f3f3;
+    color: #0070c9;
+    
 }
 
 .nav > li > a i {
@@ -3222,5 +3270,23 @@ html.k-materialblack .demo-section.k-content {
 .badge-disable {
   background-color: #2A2E36;
   color: #8B91A0;
+}
+
+.crm-nav .navbar-default .navbar-nav>.open>a, 
+.crm-nav .navbar-default .navbar-nav>.open>a:focus, 
+.crm-nav .navbar-default .navbar-nav>.open>a:hover {
+    background-color:#4679bd;
+    color: #fff;
+}
+
+.nav-model li{
+    min-width: 80px;
+    text-align: center;
+}
+
+
+#root-nav li > a > i{
+    color:#fff;
+    padding-right:0.5em;
 }
 
